@@ -22,7 +22,6 @@ export default function QuizPlay() {
     recordAnswer,
     nextQuestion,
     setLastSubmission,
-    setLastLeaderboard,
   } = useStore()
 
   const [loading, setLoading] = useState(true)

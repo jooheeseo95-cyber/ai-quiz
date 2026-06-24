@@ -18,7 +18,6 @@ export default function AdminReview() {
   const { draftQuestions, updateDraftQuestion, removeDraftQuestion } = useStore()
   const [editingIndex, setEditingIndex] = useState<number | null>(null)
   const [saving, setSaving] = useState(false)
-  const [accessCode, setAccessCode] = useState('')
 
   const handleSave = async (activate: boolean) => {
     setSaving(true)
@@ -27,8 +26,6 @@ export default function AdminReview() {
       if (activate) {
         await updateQuizSetStatus(setId, 'active')
       }
-      const quiz = draftQuestions
-      setAccessCode(quiz.length > 0 ? '' : '')
       navigate('/admin/share', { state: { setId, title, activate } })
     } catch (e) {
       console.error(e)

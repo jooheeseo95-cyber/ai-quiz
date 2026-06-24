@@ -23,3 +23,5 @@ api.md
 
 # PDF 파일 (대용량 · 테스트용)
 *.pdf
+
+.vercel
