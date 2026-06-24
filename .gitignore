@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+functions/node_modules/
+
+# build
+dist/
+functions/lib/
+
+# env (contains API keys - DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+
+# firebase
+.firebase/
+
+# misc
+.DS_Store
+*.local
+
+# API 키 포함 파일 (절대 커밋 금지)
+api.md
+
+# PDF 파일 (대용량 · 테스트용)
+*.pdf

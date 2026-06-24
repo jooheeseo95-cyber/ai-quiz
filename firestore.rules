@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // MVP: 모든 읽기/쓰기 허용 (사내망 전용 운영, Phase 2에서 인증 기반으로 전환)
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
